@@ -119,7 +119,7 @@ installation.  Contact support@bostondynamics.com for help.
 Next, start the python interpreter:
 
 ```shell
-$ python3
+$ python
 Python 3.6.8 (default, Jan 6 2022, 11:02:34)
 [GCC 8.0.1 20180414 (experimental) [trunk revision 259383]] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -180,7 +180,7 @@ $ ping 192.168.80.3
 Issue the following command to get your Spot robot's ID:
 
 ```shell
-$ python3 -m bosdyn.client 192.168.80.3 id
+$ python -m bosdyn.client 192.168.80.3 id
 beta-BD-90490007     02-19904-9903   beta29     spot (V3)
 Software: 2.3.4 (b11205d698e 2020-12-11 11:53:12)
 Installed: 2020-12-11 15:06:57
@@ -191,11 +191,11 @@ If this worked for you, SUCCESS!  You are now successfully communicating with Sp
 If you see one of the following:
 
 ```shell
-$ python3 -m bosdyn.client 192.168.80.3 id
+$ python -m bosdyn.client 192.168.80.3 id
 Could not contact robot with hostname "192.168.80.3"
 ```
 ```shell
-$ python3 -m bosdyn.client 192.168.80.3 id
+$ python -m bosdyn.client 192.168.80.3 id
 RetryableUnavailableError: _InactiveRpcError: gRPC service unavailable. Likely transient and can be resolved by retrying the request.
 ```
 
@@ -226,6 +226,13 @@ Your Spot robot should have powered up its motors, stood up, made a few poses, w
 Try it again, and this time, push the E-Stop button and watch the robot do a "glide-stop."  Remember, E-Stop is your friend.
 
 To see an example of what the robot images looks like, change the execution type `MOVE` (in main.py) to  `IMAGES`. Run again the main. This time the robot shoul have stood up, taken a few pictures, and sat down. The taken pictures will be stored in folder called "results".
+
+You can specify which camera or source has to be used on the command line with the following keys: `--source SOURCE` and `--camera CAMERA`.
+
+To get a understandable list of the possible command line arguments, run:
+```shell
+$ python src/main.py -h
+```
 
 **Congratulations, you are now a full-fledged Spot Programming Example Operator!**
 
