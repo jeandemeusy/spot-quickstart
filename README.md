@@ -240,4 +240,5 @@ $ python src/main.py -h
 ## Documentation
 
 The Spot SDK documentation is available at https://dev.bostondynamics.com
+
 The Spot Python SDK distribution is available at https://github.com/boston-dynamics/spot-sdk.
