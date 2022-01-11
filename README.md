@@ -233,4 +233,5 @@ To see an example of what the robot images looks like, change the execution type
 ## Documentation
 
 The Spot SDK documentation is available at https://dev.bostondynamics.com
+
 The Spot Python SDK distribution is available at https://github.com/boston-dynamics/spot-sdk.
